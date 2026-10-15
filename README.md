@@ -8,7 +8,7 @@ to bundle the many small files inside built-in resource/behavior packs
 There's no official public specification for this format. This library is an
 independent, clean-room C# implementation based on the on-disk layout as understood
 from community reverse-engineering, cross-checked against two existing open-source
-implementations (one Rust, one C - see [`THIRD-PARTY-NOTICES.md`](https://github.com/Cubeir/BrArchive.Net/blob/master/THIRD-PARTY-NOTICES.md)
+implementations (one Rust, one C - see [`THIRD-PARTY-NOTICES.md`](https://github.com/vanilla-rtx/BrArchive.Net/blob/master/THIRD-PARTY-NOTICES.md)
 for full credit). No code was copied from either project.
 
 - Targets `netstandard2.0`, `net8.0`, and `net10.0` - works from .NET Framework 4.6.1+
@@ -18,12 +18,12 @@ for full credit). No code was copied from either project.
 - Defensive parsing: corrupt/truncated files raise a clear `BrArchiveFormatException`
   instead of crashing or reading garbage.
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Cubeir/BrArchive.Net/release.yml?branch=master&label=build&style=flat-square&color=2ea44f)](https://github.com/Cubeir/BrArchive.Net/actions)
-[![Last Commit](https://img.shields.io/github/last-commit/Cubeir/BrArchive.Net?style=flat-square&color=blue)](https://github.com/Cubeir/BrArchive.Net/commits/master)
-[![Repo Size](https://img.shields.io/github/repo-size/Cubeir/BrArchive.Net?style=flat-square&color=informational)](https://github.com/Cubeir/BrArchive.Net)
-[![License](https://img.shields.io/github/license/Cubeir/BrArchive.Net?style=flat-square&color=yellow)](https://github.com/Cubeir/BrArchive.Net/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/vanilla-rtx/BrArchive.Net/release.yml?branch=master&label=build&style=flat-square&color=2ea44f)](https://github.com/vanilla-rtx/BrArchive.Net/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/vanilla-rtx/BrArchive.Net?style=flat-square&color=blue)](https://github.com/vanilla-rtx/BrArchive.Net/commits/master)
+[![Repo Size](https://img.shields.io/github/repo-size/vanilla-rtx/BrArchive.Net?style=flat-square&color=informational)](https://github.com/vanilla-rtx/BrArchive.Net)
+[![License](https://img.shields.io/github/license/vanilla-rtx/BrArchive.Net?style=flat-square&color=yellow)](https://github.com/vanilla-rtx/BrArchive.Net/blob/master/LICENSE)
 [![NuGet](https://img.shields.io/nuget/v/BrArchive.Net?style=flat-square&color=blueviolet)](https://www.nuget.org/packages/BrArchive.Net)
-[![Issues](https://img.shields.io/github/issues/Cubeir/BrArchive.Net?style=flat-square&color=critical)](https://github.com/Cubeir/BrArchive.Net/issues)
+[![Issues](https://img.shields.io/github/issues/vanilla-rtx/BrArchive.Net?style=flat-square&color=critical)](https://github.com/vanilla-rtx/BrArchive.Net/issues)
 
 ## Install
 
@@ -110,11 +110,11 @@ tool built on top of the library, useful on its own and as a reference for the A
 If you just want a command-line tool and don't write .NET code:
 
 - **Download a ready-to-run build** - grab the zip for your OS from the
-  [Releases page](https://github.com/Cubeir/BrArchive.Net/releases), unzip it,
+  [Releases page](https://github.com/vanilla-rtx/BrArchive.Net/releases), unzip it,
   and run it directly. No .NET SDK required.
 - **Or, if you already have the .NET SDK**, build it from source:
   ```bash
-  git clone https://github.com/Cubeir/BrArchive.Net.git
+  git clone https://github.com/vanilla-rtx/BrArchive.Net.git
   cd BrArchive.Net
   dotnet run --project samples/BrArchive.Net.Cli -- list mypack.brarchive
   ```
@@ -139,7 +139,7 @@ brarchive pack ./my_textures textures.brarchive --recursive
   and a 4-byte little-endian content length.
 - The full byte-level layout, with field-by-field offsets, is documented in the
   XML doc comments on `BrArchiveFormat` in
-  [`src/BrArchive.Net/BrArchiveFormat.cs`](https://github.com/Cubeir/BrArchive.Net/blob/master/src/BrArchive.Net/BrArchiveFormat.cs).
+  [`src/BrArchive.Net/BrArchiveFormat.cs`](https://github.com/vanilla-rtx/BrArchive.Net/blob/master/src/BrArchive.Net/BrArchiveFormat.cs).
 - Some entries have a content length of zero - historically a common case for non-JSON
   files specifically, though that's an observation, not a rule the format enforces, and
   it appears to have changed across game versions as Mojang has expanded what gets
@@ -195,7 +195,7 @@ file format, so that's left to whatever you build on top.
 ## Building from source
 
 ```bash
-git clone https://github.com/Cubeir/BrArchive.Net.git
+git clone https://github.com/vanilla-rtx/BrArchive.Net.git
 cd BrArchive.Net
 dotnet build
 dotnet test
@@ -204,7 +204,7 @@ dotnet test
 ## Contributing / License
 
 Contributions welcome - please open an issue or PR. Licensed under the
-[MIT License](https://github.com/Cubeir/BrArchive.Net/blob/master/LICENSE). See
-[`THIRD-PARTY-NOTICES.md`](https://github.com/Cubeir/BrArchive.Net/blob/master/THIRD-PARTY-NOTICES.md)
+[MIT License](https://github.com/vanilla-rtx/BrArchive.Net/blob/master/LICENSE). See
+[`THIRD-PARTY-NOTICES.md`](https://github.com/vanilla-rtx/BrArchive.Net/blob/master/THIRD-PARTY-NOTICES.md)
 for credit to the prior open-source work this library's understanding of the
 format is based on.

@@ -19,8 +19,8 @@
     <PackageTags>minecraft;bedrock;brarchive;archive;resourcepack;behaviorpack;mojang;bedrock-edition;file-format</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Cubeir/BrArchive.Net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Cubeir/BrArchive.Net</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/vanilla-rtx/BrArchive.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vanilla-rtx/BrArchive.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
